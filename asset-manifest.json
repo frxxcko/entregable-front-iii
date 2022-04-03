@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frxxcko/entregable-front-iii/static/css/main.f0708a16.css",
+    "main.js": "/frxxcko/entregable-front-iii/static/js/main.ada004e2.js",
+    "index.html": "/frxxcko/entregable-front-iii/index.html",
+    "main.f0708a16.css.map": "/frxxcko/entregable-front-iii/static/css/main.f0708a16.css.map",
+    "main.ada004e2.js.map": "/frxxcko/entregable-front-iii/static/js/main.ada004e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0708a16.css",
+    "static/js/main.ada004e2.js"
+  ]
+}
