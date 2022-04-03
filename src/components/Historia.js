@@ -46,7 +46,6 @@ class Historia extends React.Component {
     }
 
     this.setState(nuevoState)
-    console.log(idSiguienteHistoria);
   }
   
   render() {
