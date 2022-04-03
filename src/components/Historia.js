@@ -17,11 +17,11 @@ class Historia extends React.Component {
   }
 
   componentDidMount() {
-    // console.log("Se montó correctamente el componente");
+    // alert("Se montó correctamente el componente");
   }
   
   componentDidUpdate(prevProps, prevState){
-    // console.log("Hubo una actualizacion en el componente");
+    // alert("Hubo una actualizacion en el componente");
   } 
   
   agregarOpcionElegidaAlHistorial = opcionElegida => this.state.historialOpcionesElegidas.push(opcionElegida)
@@ -36,7 +36,6 @@ class Historia extends React.Component {
       alert("Fin. \n Gracias por jugar!")
       return
     }
-    
 
     const nuevoState = {
       id: siguienteHistoria.id,
