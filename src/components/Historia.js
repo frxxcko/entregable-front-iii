@@ -33,6 +33,7 @@ class Historia extends React.Component {
     this.agregarOpcionElegidaAlHistorial(idSiguienteHistoria)
     
     if(!siguienteHistoria){
+      alert("Fin. \n Gracias por jugar!")
       return
     }
     
