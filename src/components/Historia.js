@@ -1,6 +1,6 @@
 import React from "react";
 import RegistroHistorial from "./RegistroHistorial"
-
+import Opcion from "./Opcion"
 
 class Historia extends React.Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class Historia extends React.Component {
   agregarOpcionElegidaAlHistorial = opcionElegida => this.state.historialOpcionesElegidas.push(opcionElegida)
 
   opcionSeleccionadaHandler(e){
+    
     const opcionElegida = e.target.id
     const idSiguienteHistoria = `${Number(this.state.id[0]) + 1 + opcionElegida}`
     const siguienteHistoria = this.props.data.find( nxt => nxt.id === idSiguienteHistoria)
@@ -44,7 +45,7 @@ class Historia extends React.Component {
       b: siguienteHistoria.opciones.b,
       historialOpcionesElegidas: this.state.historialOpcionesElegidas
     }
-
+    debugger
     this.setState(nuevoState)
   }
   
@@ -52,15 +53,9 @@ class Historia extends React.Component {
     return <React.Fragment>
       <h1 className="historia">{this.state.historia}</h1>
       <div className="opciones">
-        <div className="opcion">
-          <button id="a" type="button" className="botones" onClick={ e => this.opcionSeleccionadaHandler(e)}>A</button>
-          <h2>{this.state.a}</h2>
-        </div>
-        <div className="opcion">
-          <button id="b" type="button" className="botones" onClick={ e => this.opcionSeleccionadaHandler(e)}>B</button>
-          <h2>{this.state.b}</h2>
-        </div>
-      </div>
+        <Opcion opcion={this.state.a} valor={'A'} onPlayerClick={ e => this.opcionSeleccionadaHandler(e)} />
+        <Opcion opcion={this.state.b} valor={'B'} onPlayerClick={ e => this.opcionSeleccionadaHandler(e)} />
+      </div>      
       <RegistroHistorial historial={this.state.historialOpcionesElegidas}/>
     </React.Fragment>
   }
